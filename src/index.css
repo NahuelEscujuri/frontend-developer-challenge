@@ -20,9 +20,13 @@ body{
   background-color: var(--text-color);
 }
 
+.center{
+  margin: 0 8%;
+}
+
 .searchBar{
-  width: 95%;
-  margin: 30px auto;
+  width: 100%;
+  margin: 30px 0;
   position: relative;
   overflow: hidden;
   border: var(--dark-color) 1px solid;
@@ -47,8 +51,8 @@ body{
 
 .keyword-container{
   display: flex;
-  width: 95%;
-  margin: 14px auto;
+  width: 100%;
+  margin: 14px 0;
 }
 .keyword{
   color: var(--text-color);
@@ -70,9 +74,9 @@ body{
 .card-container{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 95%;
-  margin: 18px auto;
+  justify-content: space-between;
+  width: 100%;
+  margin: 18px 0;
 }
 
 .card{
@@ -81,6 +85,7 @@ body{
 	box-shadow: 5px 0px 20px #1113;
   padding: 8px;
   margin: 15px 0;
+  border-radius: 3px;
   background-color: var(--text-color);
   /* border: #f00 2px solid; */
 }
@@ -128,7 +133,7 @@ body{
   fill: none;
   stroke-width: 10;
   stroke: var(--dark-color);
-  stroke-linecap: round;
+  stroke-linecap: square;
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
   transform: translate(5px, 5px);
@@ -161,12 +166,29 @@ body{
 
 /* Result */
 .results-count{
-  margin: 8px auto;
-  width: 95%;
+  margin: 8px 0;
+  width: 100%;
   font-weight: 700;
   color: var(--clear-color);
 }
 
 .desactive{
   display: none;
+}
+
+@media (max-width: 1060px){
+  .card-container{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px){
+  .card{
+    flex-direction: column;
+    padding: 0 0 30px 0;
+  }
+  .card img{
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }

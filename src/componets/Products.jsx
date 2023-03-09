@@ -47,7 +47,7 @@ export default function Products(){
 
   
   
-  //#region Keywords methods
+//#region Keywords methods
   function handleSearch(e){
     setCurrentSearchBar(e.target.value);
   }
@@ -76,7 +76,7 @@ export default function Products(){
 //#endregion
 
   return(
-    <>
+    <div className='center'>
     {/* Search Bar */}
     <form className='searchBar'>
         {/* Input */}
@@ -136,6 +136,6 @@ export default function Products(){
     {!products && <Loader></Loader>}
 
     </div>
-    </>
+    </div>
   )
 }
